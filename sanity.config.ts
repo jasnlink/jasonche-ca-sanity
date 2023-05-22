@@ -6,6 +6,19 @@ import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
 
 const devOnlyPlugins = [getStartedPlugin()]
 
+export const myStructure = (S) =>
+  S.list()
+    .title('Base')
+    .items([
+      S.listItem()
+        .title('Profile Card')
+        .child(
+          S.document()
+            .schemaType('profileCard')
+            .documentId('profileCard')),
+      ...S.documentTypeListItems().filter(listItem => !['profileCard'].includes(listItem.getId()))
+    ])
+
 export default defineConfig({
   name: 'default',
   title: 'jasonche-ca-sanity',
@@ -13,7 +26,7 @@ export default defineConfig({
   projectId: 'q8h9ggfv',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [deskTool({structure: myStructure,}), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
   schema: {
     types: schemaTypes,
