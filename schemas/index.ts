@@ -1,4 +1,4 @@
 import profileCard from './profileCard'
-import project from './project'
+import projects from './projects'
 
-export const schemaTypes = [profileCard, project]
+export const schemaTypes = [profileCard, projects]
