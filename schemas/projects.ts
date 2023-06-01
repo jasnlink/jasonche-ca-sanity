@@ -1,8 +1,12 @@
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+
 export default {
     name: 'projects',
     title: 'Projects',
     type: 'document',
+    orderings: [orderRankOrdering],
     fields: [
+        orderRankField({ type: 'string' }),
         {
             name: 'title',
             title: 'Project title',
@@ -26,41 +30,12 @@ export default {
                     {
                         name: 'verticalImageGallery',
                         title: 'Vertical Image Gallery',
-                        type: 'object',
-                        fields: [
-                            {
-                                name: 'verticalImageGallery',
-                                title: 'Vertical Image Gallery',
-                                type: 'array',
-                                of: [
-                                    {
-                                        name: 'image',
-                                        type: 'image',
-                                        fields: [
-                                            {
-                                                name: 'alt',
-                                                title: 'Description',
-                                                type: 'string',
-                                                validation: Rule => Rule.required()
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
+                        type: 'verticalImageGallery'
                     },
                     {
                         name: 'horizontalImage',
                         title: 'Horizontal Image',
-                        type: 'image',
-                        fields: [
-                            {
-                                name: 'alt',
-                                title: 'Description',
-                                type: 'string',
-                                validation: Rule => Rule.required()
-                            }
-                        ]
+                        type: 'horizontalImage',
                     }
                 ],
             validation: Rule => Rule.required()

@@ -4,6 +4,11 @@ export default {
     type: 'document',
     fields: [
         {
+            name: 'profileImage',
+            title: 'Profile Image',
+            type: 'profileImage'
+        },
+        {
             name: 'fullName',
             title: 'Full Name',
             type: 'string',
@@ -22,38 +27,16 @@ export default {
             type: 'array',
             of: [
                 {
-                    name: 'inline',
-                    type: 'object',
-                    fields: [
-                        {
-                            title: 'Skill',
-                            name: 'skill',
-                            type: 'string'
-                        },
-                        {
-                            title: 'Years of experience',
-                            name: 'years',
-                            type: 'number'
-                        }
-                    ]
+                    name: 'skill',
+                    title: 'Skill',
+                    type: 'skill'
                 }
             ]
         },
         {
             name: 'resume',
             title: 'Resume',
-            type: 'file',
-            options: {
-                accept: '.pdf',
-            },
-            fields: [
-                {
-                    name: 'description',
-                    title: 'Description',
-                    type: 'string'
-                }
-            ],
-            validation: Rule => Rule.required()
+            type: 'resume'
         }
     ]
 }
