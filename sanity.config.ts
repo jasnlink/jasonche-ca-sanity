@@ -25,6 +25,12 @@ export const myStructure = (S, context) =>
           S,
           context
         }),
+        orderableDocumentListDeskItem({
+          type: 'socialLinks',
+          title: 'Social Links',
+          S,
+          context
+        }),
     ])
 
 export default defineConfig({
