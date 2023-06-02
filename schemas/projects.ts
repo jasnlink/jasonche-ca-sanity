@@ -40,5 +40,15 @@ export default {
                 ],
             validation: Rule => Rule.required()
         },
+        {
+            name: 'seoTitle',
+            title: 'SEO title',
+            type: 'string',
+        },
+        {
+            name: 'seoDesc',
+            title: 'SEO description',
+            type: 'text',
+        }
     ]
 }

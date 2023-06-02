@@ -37,6 +37,16 @@ export default {
             name: 'resume',
             title: 'Resume',
             type: 'resume'
+        },
+        {
+            name: 'seoTitle',
+            title: 'SEO title',
+            type: 'string',
+        },
+        {
+            name: 'seoDesc',
+            title: 'SEO description',
+            type: 'text',
         }
     ]
 }
