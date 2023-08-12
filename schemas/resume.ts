@@ -1,4 +1,6 @@
-export default {
+import { FileDefinition } from "sanity";
+
+export default<FileDefinition> {
     name: 'resume',
     title: 'Resume',
     type: 'file',

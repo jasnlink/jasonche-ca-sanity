@@ -1,6 +1,6 @@
 import {defineConfig, isDev} from 'sanity'
 import {visionTool} from '@sanity/vision'
-import {deskTool} from 'sanity/desk'
+import {deskTool, StructureResolver} from 'sanity/desk'
 import {schemaTypes} from './schemas'
 import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
 import {media} from 'sanity-plugin-media'
@@ -9,7 +9,7 @@ import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 
 const devOnlyPlugins = [getStartedPlugin()]
 
-export const myStructure = (S, context) =>
+export const myStructure: StructureResolver = (S, context) =>
   S.list()
     .title('Base')
     .items([

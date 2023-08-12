@@ -1,4 +1,6 @@
-export default {
+import { ObjectDefinition } from "sanity";
+
+export default<ObjectDefinition> {
     name: 'skill',
     title: 'Skill',
     type: 'object',

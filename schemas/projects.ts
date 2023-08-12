@@ -1,6 +1,7 @@
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+import { DocumentDefinition } from 'sanity'
 
-export default {
+export default<DocumentDefinition> {
     name: 'projects',
     title: 'Projects',
     type: 'document',
@@ -39,6 +40,22 @@ export default {
                     }
                 ],
             validation: Rule => Rule.required()
+        },
+        {
+            name: 'githubSourceUrl',
+            title: 'Github Source Link',
+            type: 'url',
+            validation: Rule => Rule.uri({
+                scheme: ['http', 'https']
+            })
+        },
+        {
+            name: 'liveDemoUrl',
+            title: 'Live Demo Link',
+            type: 'url',
+            validation: Rule => Rule.uri({
+                scheme: ['http', 'https']
+            })
         },
         {
             name: 'seoTitle',

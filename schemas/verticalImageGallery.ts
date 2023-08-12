@@ -1,4 +1,6 @@
-export default {
+import { ObjectDefinition } from "sanity";
+
+export default<ObjectDefinition> {
     name: 'verticalImageGallery',
     title: 'Vertical Image Gallery',
     type: 'object',

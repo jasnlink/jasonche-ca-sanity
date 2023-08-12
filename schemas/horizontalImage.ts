@@ -1,4 +1,6 @@
-export default {
+import { ImageDefinition } from "sanity";
+
+export default<ImageDefinition> {
     name: 'horizontalImage',
     title: 'Horizontal Image',
     type: 'image',

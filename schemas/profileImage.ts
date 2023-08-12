@@ -1,4 +1,6 @@
-export default {
+import { ImageDefinition } from "sanity";
+
+export default<ImageDefinition> {
     name: 'profileImage',
     title: 'Profile Image',
     type: 'image',

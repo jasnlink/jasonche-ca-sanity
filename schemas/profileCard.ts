@@ -1,4 +1,6 @@
-export default {
+import { DocumentDefinition } from "sanity";
+
+export default<DocumentDefinition> {
     name: 'profileCard',
     title: 'Profile Card',
     type: 'document',

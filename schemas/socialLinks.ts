@@ -1,6 +1,7 @@
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+import { DocumentDefinition } from 'sanity'
 
-export default {
+export default<DocumentDefinition> {
     name: 'socialLinks',
     title: 'Social Links',
     type: 'document',
